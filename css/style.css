@@ -1,0 +1,26 @@
+body {
+  background-image: url(../img/fondo2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 10px rgb(0, 0, 0);
+  }
+  .image-container:hover img {
+    transform: scale(1.1);
+  }
+  .image-container:active img {
+    transform: scale(1.05);
+  }
