@@ -24,3 +24,18 @@ body {
   .image-container:active img {
     transform: scale(1.05);
   }
+
+  .nav-link {
+    font-weight: bold;
+}
+
+
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 3em;
+  color: #ffffff; /* Color del texto */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(206, 205, 205, 0.5); /* Sombra del texto */
+  margin-top: 50px; /* Espacio en la parte superior */
+}
+
