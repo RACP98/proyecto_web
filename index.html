@@ -8,11 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    
+    <!-- Barra Menu -->
     <nav class="navbar navbar-expand-lg bg-primary fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">LOGO</a>
@@ -25,10 +21,18 @@
               <a class="nav-link "  aria-current="page"  href="index.html">INICIO</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+
+          <li class="nav-item  dropstart ">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+              MONITO
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Perfil</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+            </ul>
+          </li>
+
         </div>
       </div>
     </nav>
@@ -36,7 +40,7 @@
     <br><br><br>
     
     <!-- CARRUSEL inicio -->
-    <div class="container-fluid col-11 rounded" >
+    <div class="container-fluid col-9 rounded" >
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -47,7 +51,7 @@
             </div>
             <div class="carousel-inner rounded ">
                   <div class="carousel-item active">
-                    <a href="gcb.html"><img src="img/p1.jpg" class="d-block w-100 rounded"  alt="..." width="800" height="300"></a>
+                    <a href="gcb.html"><img src="img/p1.jpg" class="d-block w-100 rounded"  alt="..." width="800" height="350"></a>
                   </div>
                   <div class="carousel-item ">
                     <a href="mumi.html"><img src="img/p2.jpg" class="d-block w-100 rounded"  alt="..." width="800" height="300"></a>
@@ -75,8 +79,9 @@
     <br>
 
     <!-- primera fila de peliculas -->
-    <div class="container mt-3">
-      <div class="row g-3">
+    <div class="container mt-4 ">
+      <p>NOVEDADES</p>
+      <div class="row g-10">
         <div class="col-2">
           <div class="image-container">
             <a href="mumi.html"><img src="img/01.jpg" alt="..." class="img-fluid rounded"></a>
@@ -94,7 +99,7 @@
         </div>
         <div class="col-2">
           <div class="image-container">
-            <a href="hp7.2.html"><img src="img/04.jpg" alt="..." class="img-fluid rounded"></a>
+            <a href="hp7.html"><img src="img/04.jpg" alt="..." class="img-fluid rounded"></a>
           </div>
         </div>
         <div class="col-2">
@@ -109,10 +114,10 @@
         </div>
       </div>
     </div>
-
     <!-- segunda fila de peliculas -->
-    <div class="container mt-3">
-      <div class="row g-3">
+    <div class="container mt-4">
+      <p>POPULARES</p>
+      <div class="row g-10">
         <div class="col-2">
           <div class="image-container">
             <a href="mumi.html"><img src="img/07.jpg" alt="..." class="img-fluid rounded"></a>
@@ -145,6 +150,10 @@
         </div>
       </div>
     </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     
 
 </body>
