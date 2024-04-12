@@ -27,7 +27,7 @@ body {
 
   .nav-link {
     font-weight: bold;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inspire-Bold', sans-serif;
     color: #ffffff; 
     text-align: center;
     text-shadow: 2px 2px 4px rgba(206, 205, 205, 0.5);
@@ -48,3 +48,10 @@ h1 {
   background-image: linear-gradient(to right, rgb(90, 88, 88), rgb(0, 0, 0));
 }
 
+p {
+  font-family: 'Inspire-Regular', sans-serif;
+  font-size: 1em;
+  color: #ffffff; 
+  text-shadow: 2px 2px 4px rgba(206, 205, 205, 0.5);
+  margin-top: 50px; 
+}
