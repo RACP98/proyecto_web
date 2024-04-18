@@ -46,6 +46,7 @@ h1 {
 
 .navbar {
   background-image: linear-gradient(to right, rgb(90, 88, 88), rgb(0, 0, 0));
+  height: 50px; /* Altura fija para el navbar */
 }
 
 p {
@@ -54,4 +55,26 @@ p {
   color: #ffffff; 
   text-shadow: 2px 2px 4px rgba(206, 205, 205, 0.5);
   margin-top: 50px; 
+}
+
+/* Ajustes logo en navbar */
+
+#navbar-img {
+  max-width: 80px; /* Ancho máximo de la imagen */
+  max-height: 80px; /* Alto máximo de la imagen */
+  object-fit: cover; /* Para asegurarte de que la imagen se ajuste correctamente */
+  border-radius: 50%; /* Para redondear la imagen */
+}
+
+
+/* Ajustes logo inicio de sesion */
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.logo {
+  width: 800px;
 }
