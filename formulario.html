@@ -16,7 +16,7 @@
             Formulario de Registro
           </div>
           <div class="card-body">
-            <form>
+            <form id="subscriptionForm">
               <div class="form-group">
                 <label for="nombre">Nombre Completo</label>
                 <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo">
@@ -71,12 +71,115 @@
                 </div>
                 <!-- Agrega más géneros según tus necesidades -->
               </div>
-              <button type="submit" class="btn btn-primary">Registrarse</button>
+              <button type="submit" class="btn btn-primary" id="registrarse-btn">Registrarse</button>
             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- Libreras JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- Fin Libreras JavaScript -->
+
+<!-- JavaScript embebido -->
+<script>
+  //Función que indica que una pagina esta lista para que su codigo javascript se ejecute.
+  $(document).ready(function () {
+      $('#subscriptionModal').fadeIn('show');// Al terminar de cargar la pagina, mostrará el modal.
+
+      //con find puedo buscar mas de un elemento, y con each los puedo recorrer.
+      $(subscriptionForm).find('input, label, button, small').each(function(index, element) {
+      console.log($(element).attr('name'));
+
+
+      });
+
+      //Obtener el valor de un texto con text()
+      var texto_titulo = $('#exampleModalLabel').text();
+      console.log('el titulo  del modal es: '+ texto_titulo);
+  });
+
+  // Cerrar el modal al hacer clic boton cerrar
+  $('#close-modal').click(function () {
+      $('#subscriptionModal').fadeOut();
+  });
+
+  // Cerrar el modal al hacer clic en X del modal
+  $('.close').click(function () {
+      $('#subscriptionModal').fadeOut();
+  });
+
+  // Cerrar el modal al hacer clic fuera del contenido
+  $(window).click(function (event) {
+      if (event.target == document.getElementById('subscriptionModal')) {
+          $('#subscriptionModal').fadeOut();
+      }
+  });
+
+
+
+
+  //Funcion que es llamada cuando se ejecuta un submit desde un formulario segun ID
+  $('#subscriptionForm').submit(function (event) {
+     
+      var email = $('#email').val(); //Obtengo el valor de un input segun ID y lo guardo en una variable.
+     
+      var email_2 = $(this).find('#email').val(); //Obtengo el valor de un input segun ID utilizando funcion find()
+
+      var email_sin_espacios = $.trim(email); // trim elimina los espacios adelante, atras y al medio del contenido
+
+
+      if (isValidEmail(email_sin_espacios)) {
+
+          $('#subscriptionModal').fadeOut(); // por ejemplo, ocultar el modal.
+
+          let timerInterval;
+          Swal.fire({
+              title: "Muchas gracias por la suscripción !",
+              html: "Sera dirigido a la pagina en <b></b> segundos.",
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: () => {
+                  Swal.showLoading();
+                  const timer = Swal.getPopup().querySelector("b");
+                  timerInterval = setInterval(() => {
+                      timer.textContent = `${Math.ceil(Swal.getTimerLeft() / 1000)}`;
+                  }, 100);
+              },
+              willClose: () => {
+                  clearInterval(timerInterval);
+              }
+          }).then((result) => {
+              if (result.dismiss === Swal.DismissReason.timer) {
+                  window.location.href = 'session.html';              
+              }
+          });
+
+          //en esta parte deberiamos mandar el email a la base de datos.
+          event.preventDefault(); // Detengo el envio del formulario
+
+
+      } else {
+
+          $('#emailHelp').text('Por favor, ingresa un correo electrónico válido.').css('color', 'red'); //Modifico el html de un id //modifico su propiedad css color
+          event.preventDefault(); // Detengo el envio del formulario.
+      }
+  });
+
+  //Funcion para validar caracteres de un email a traves de un patron de caract
+  function isValidEmail(email) {
+      var pattern = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/;
+      return pattern.test(email);
+  }
+</script>
 </body>
 </html>
