@@ -78,3 +78,14 @@ p {
 .logo {
   width: 800px;
 }
+
+
+.dropdown-menu {
+  background-color: rgba(206, 205, 205, 0.9); /* Fondo semi-transparente */
+  border: none; /* Sin borde */
+}
+
+.dropdown-menu a.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Resaltado al pasar el mouse */
+}
+
