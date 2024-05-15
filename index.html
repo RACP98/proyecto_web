@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg bg-primary fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img id="navbar-img" src="img\logo\logo.png" alt="Cine Wave" >
+          <img id="navbar-img" src="img\logo\logo.png" alt="Cine Wave">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,23 +22,32 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link "  aria-current="page"  href="index.html">INICIO</a>
+              <a class="nav-link" aria-current="page" href="index.html">INICIO</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIA</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Accion</a></li>
+                <li><a class="dropdown-item" href="#">CienciaFiccion</a></li>
+                <li><a class="dropdown-item" href="#">Comedia</a></li>
+                <li><a class="dropdown-item" href="#">Drama</a></li>
+                <li><a class="dropdown-item" href="#">Romance</a></li>
+                <li><a class="dropdown-item" href="#">Terror</a></li>
+              </ul>
             </li>
           </ul>
-
-          <li class="nav-item  dropstart ">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-              <img id="navbar-img" src="img/usuario.png" alt="Usuario" style="width: 50px; height: 50px;">
-
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Perfil</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="session.html">Cerrar Sesion</a></li>
-            </ul>
-          </li>
-          
-
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropstart">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                <img id="navbar-img" src="img/usuario.png" alt="Usuario" style="width: 40px; height: 40px;">
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="session.html">Cerrar Sesion</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
