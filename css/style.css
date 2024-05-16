@@ -60,8 +60,8 @@ p {
 /* Ajustes logo en navbar */
 
 #navbar-img {
-  max-width: 80px; /* Ancho máximo de la imagen */
-  max-height: 80px; /* Alto máximo de la imagen */
+  max-width: 80px; /* Ancho mÃ¡ximo de la imagen */
+  max-height: 80px; /* Alto mÃ¡ximo de la imagen */
   object-fit: cover; /* Para asegurarte de que la imagen se ajuste correctamente */
   border-radius: 50%; /* Para redondear la imagen */
 }
@@ -89,3 +89,40 @@ p {
   background-color: rgba(0, 0, 0, 0.1); /* Resaltado al pasar el mouse */
 }
 
+
+.textanimada {
+  font-family: 'Arial', sans-serif;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  background-clip: text;
+  color: transparent;
+}
+
+.textcomedia {
+  font-family: 'Arial', sans-serif;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(to right, yellow, orange, red);
+  background-clip: text;
+  color: transparent;
+}
+
+.textterror {
+  font-family: 'Arial', sans-serif;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 0, 0),rgb(255, 255, 255));
+  background-clip: text;
+  color: transparent;
+}
+
+.transparent-form {
+  background-color: rgb(216, 216, 216); /* Blanco con 80% de opacidad */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0);
+}
