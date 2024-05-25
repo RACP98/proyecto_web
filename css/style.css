@@ -126,3 +126,15 @@ p {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0);
 }
+.btn {
+  color:#fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 20px;
+  overflow: hidden;
+  position: relative}
+    
+  .btn:hover {
+  background:
+  transparent;
+  box-shadow: 0 0 20px 5px #fdfdfd;}
