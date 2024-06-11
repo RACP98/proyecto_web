@@ -1,3 +1,4 @@
+
 body {
   background-image: url(../img/fondo5.jpg);
   background-size: cover;
@@ -5,12 +6,11 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
-  .image-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
+.image-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
   .image-container img {
     display: block;
     max-width: 100%;
@@ -24,7 +24,6 @@ body {
   .image-container:active img {
     transform: scale(1.05);
   }
-
   .nav-link {
     font-weight: bold;
     font-family: 'Inspire-Bold', sans-serif;
@@ -34,14 +33,18 @@ body {
   
 }
 
-
 h1 {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Inspire-Regular', sans-serif;
   font-size: 3em;
   color: #ffffff; 
   text-align: center;
   text-shadow: 2px 2px 4px rgba(206, 205, 205, 0.5);
   margin-top: 50px; 
+}
+
+h3 {
+  font-family: 'Inspire-Regular', sans-serif;
+  color: #ffffff; 
 }
 
 .navbar {
@@ -56,7 +59,10 @@ p {
   text-shadow: 2px 2px 4px rgba(206, 205, 205, 0.5);
   margin-top: 50px; 
 }
-
+label {
+  font-family: 'Inspire-Regular', sans-serif;
+  color: #ffffff; 
+}
 /* Ajustes logo en navbar */
 
 #navbar-img {
@@ -120,12 +126,6 @@ p {
   color: transparent;
 }
 
-.transparent-form {
-  background-color: rgb(216, 216, 216); /* Blanco con 80% de opacidad */
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0);
-}
 .btn {
   color:#fff;
   font-weight: 700;
@@ -138,3 +138,34 @@ p {
   background:
   transparent;
   box-shadow: 0 0 20px 5px #fdfdfd;}
+
+  .wrapper {
+    position: relative;
+    width: 400px;
+    height: 650px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .8);
+  }
+  
+  .custom-input {
+    background-color: #c2c2c2f1;
+  }
+  
+  .modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: relative; /* Fijar posición */
+    z-index: 1; /* Ubicar sobre otros elementos */
+    width: 800px;
+    height: 650px;
+  }
+  .modal-content{
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 16px 16px rgba(0, 0, 0, .8);
+    }
